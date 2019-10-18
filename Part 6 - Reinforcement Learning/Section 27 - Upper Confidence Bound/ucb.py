@@ -41,14 +41,15 @@ dataset = pd.read_csv('Ads_CTR_Optimisation.csv')
 # dicide from here which version of the ad to show to the user.
 
 # implementing UCB
-# Step 1:
 import math
+N = 10000           # number of samples
+d = 10              # number of ads
+
+# Step 1:
 numbers_of_selections = [0] * d
 sums_of_rewards = [0] * d
 
 # step 2 & 3:
-N = 10000           # number of samples
-d = 10              # number of ads
 ads_selected = []   # empty vector
 total_reward = 0
 
